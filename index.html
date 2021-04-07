@@ -3,13 +3,32 @@
 <body>
 
 <script>
-    let provider = undefined
-        , provFilter = undefined
 
-    //let providerTest = new Boolean(!((provider) && (provider !== "")));
-    let result = new Boolean(!provFilter || (!((provider) && (provider !== "")) || provider.includes(provFilter)));
+    function conditionTest(provFilter, provider) {
+        let result = new Boolean(!provFilter || (!((provider) && (provider !== "")) || provider.includes(provFilter)));
 
-    console.log(result)
+        console.log(result);
+    }
+
+    conditionTest(undefined, undefined);
+
+    conditionTest(undefined, "");
+
+    conditionTest(undefined, "akarmi");
+
+    conditionTest("", undefined);
+
+    conditionTest("aka", undefined);
+
+    conditionTest("", "");
+
+    conditionTest("", "akarmi");
+
+    conditionTest("aka", "akarmi");
+
+    conditionTest("sss", "akarmi");
+
+    conditionTest("aka", "");
 
 </script>
 </body>
