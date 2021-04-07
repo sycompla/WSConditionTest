@@ -3,14 +3,13 @@
 <body>
 
 <script>
-    let provider = "nnn"
-        , provFilter = "nnn"
+    let provider = "nnnnS"
+        , provFilter = "nn"
 
-    if (provider && provFilter ? provider.includes(provFilter) : !provFilter ? true : false) {
-        console.log("true")
-    } else {
-        console.log("false")
-    }
+    let providerTest = provider && provider !== "";
+    let result = !provFilter || (!providerTest || provider.includes(provFilter));
+
+    console.log(result)
 
 </script>
 </body>
