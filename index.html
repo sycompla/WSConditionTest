@@ -3,11 +3,11 @@
 <body>
 
 <script>
-    let provider = "nnnnS"
-        , provFilter = "nn"
+    let provider = undefined
+        , provFilter = undefined
 
-    let providerTest = provider && provider !== "";
-    let result = !provFilter || (!providerTest || provider.includes(provFilter));
+    //let providerTest = new Boolean(!((provider) && (provider !== "")));
+    let result = new Boolean(!provFilter || (!((provider) && (provider !== "")) || provider.includes(provFilter)));
 
     console.log(result)
 
